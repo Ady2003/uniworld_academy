@@ -1,0 +1,175 @@
+.adminPage {
+  padding-top: 120px;
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: var(--bg-secondary);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-md);
+}
+
+.cardTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 24px;
+  border-bottom: var(--border-subtle);
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardIcon {
+  width: 20px;
+  height: 20px;
+  fill: var(--accent-light);
+}
+
+/* Forms */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.input, .select, .textarea {
+  background: rgba(255, 255, 255, 0.02);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-sm);
+  padding: 12px 16px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  border-color: var(--accent);
+  background: rgba(124, 58, 237, 0.05);
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.15);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submitBtn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* List section (current items in DB) */
+.listSection {
+  background: var(--bg-secondary);
+  border-top: var(--border-subtle);
+  padding: 80px 0;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: var(--bg-tertiary);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 12px;
+  transition: var(--transition-fast);
+}
+
+.listItem:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.itemMeta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.deleteBtn {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.deleteBtn:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+@media (max-width: 900px) {
+  .grid, .listGrid {
+    grid-template-columns: 1fr;
+  }
+}

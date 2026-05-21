@@ -1,0 +1,78 @@
+.card {
+  background: rgba(18, 18, 21, 0.4);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-lg);
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: var(--transition-normal);
+  backdrop-filter: blur(8px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 58, 237, 0.25);
+  background: rgba(26, 26, 32, 0.6);
+  box-shadow: var(--shadow-glow);
+}
+
+.quoteIcon {
+  width: 32px;
+  height: 32px;
+  fill: var(--accent-light);
+  opacity: 0.15;
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.quoteText {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-top: var(--border-subtle);
+  padding-top: 20px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.userRole {
+  font-size: 0.75rem;
+  color: var(--accent-light);
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .card {
+    padding: 24px;
+  }
+}

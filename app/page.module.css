@@ -1,0 +1,220 @@
+.main {
+  position: relative;
+  background-color: var(--bg-primary);
+  width: 100%;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.sectionSubtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 48px;
+}
+
+/* Featured Courses spacing */
+.coursesSection {
+  background-color: var(--bg-secondary);
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
+  padding: 100px 0;
+  /* background wave gradient */
+  background: radial-gradient(circle at bottom, rgba(124, 58, 237, 0.08) 0%, rgba(11, 11, 12, 0) 60%), var(--bg-secondary);
+}
+
+.sectionHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.sectionHeaderRow .sectionTitle {
+  margin-bottom: 0;
+}
+
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* Categories spacing */
+.categoriesSection {
+  padding: 100px 0;
+  background: var(--bg-primary);
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* Stats spacing below fleet tab grid */
+.statsContainer {
+  margin-top: 80px;
+  border-top: var(--border-subtle);
+  padding-top: 60px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Blog Posts spacing */
+.blogSection {
+  background: var(--bg-primary);
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Team Spacing */
+.teamSection {
+  background: var(--bg-secondary);
+  text-align: center;
+  padding: 100px 0;
+}
+
+.teamWrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamLeadCard {
+  background: rgba(18, 18, 21, 0.6);
+  border: var(--border-subtle);
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  text-align: left;
+  margin-top: 40px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.teamLeadCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-accent);
+}
+
+.teamLeadAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--border-radius-md);
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.teamLeadInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.teamLeadName {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.teamLeadRole {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+}
+
+.teamLeadQuote {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Testimonials Spacing */
+.testimonialsSection {
+  padding: 100px 0;
+  background: radial-gradient(circle at center, rgba(124, 58, 237, 0.05) 0%, rgba(11, 11, 12, 0) 70%), var(--bg-primary);
+  text-align: center;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .teamLeadCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .teamLeadAvatar {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .categoriesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .sectionHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

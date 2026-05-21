@@ -1,0 +1,309 @@
+.articleContainer {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: var(--bg-primary);
+}
+
+/* Breadcrumbs back link */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+/* Article Header */
+.articleHeader {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.categoryTag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: var(--accent-light);
+  border-radius: var(--border-radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+}
+
+.articleTitleLarge {
+  font-family: var(--font-serif);
+  font-size: 3.2rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.authorCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatarMini {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: 1.5px solid var(--accent);
+}
+
+.authorNameText {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dividerDot {
+  color: var(--text-muted);
+}
+
+/* Article Hero Image */
+.heroImageWrapper {
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  border: var(--border-glow);
+}
+
+.heroImage {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* Article Body - Exquisite Editorial Style */
+.articleBody {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.85;
+  color: #e5e7eb;
+}
+
+.articleBody p {
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+}
+
+/* Drop Cap - Classic luxury editorial style */
+.articleBody p:first-of-type::first-letter {
+  float: left;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--gold);
+}
+
+/* Styled Pull-Quotes */
+.pullQuote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: var(--gold);
+  border-left: 3px solid var(--gold);
+  padding-left: 24px;
+  margin: 40px 0;
+  background: rgba(245, 158, 11, 0.03);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  border-top-right-radius: var(--border-radius-md);
+  border-bottom-right-radius: var(--border-radius-md);
+}
+
+/* Share / Bookmark Row */
+.socialShareRow {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 0;
+  border-top: var(--border-subtle);
+  border-bottom: var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shareTitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.shareButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.shareBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--border-radius-full);
+  border: var(--border-subtle);
+  background: rgba(255,255,255,0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.shareBtn:hover {
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 0.3);
+  color: var(--accent-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.shareIcon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Author Full Profile Card */
+.authorProfileCard {
+  max-width: 800px;
+  margin: 60px auto 0 auto;
+  padding: 30px;
+  border-radius: var(--border-radius-lg);
+  border: var(--border-subtle);
+  background: rgba(18, 18, 21, 0.4);
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.authorAvatarLarge {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: 3px solid rgba(124, 58, 237, 0.3);
+  box-shadow: var(--shadow-glow);
+  flex-shrink: 0;
+}
+
+.authorInfoCol {
+  flex: 1;
+}
+
+.authorRole {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.authorNameTitle {
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.authorBioText {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.authorQuote {
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Related Posts Section */
+.relatedSection {
+  background: var(--bg-secondary);
+  border-top: var(--border-subtle);
+  padding: 80px 0;
+  margin-top: 80px;
+}
+
+.relatedTitle {
+  font-family: var(--font-sans);
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 968px) {
+  .relatedGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .articleTitleLarge {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .authorProfileCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .articleTitleLarge {
+    font-size: 2.0rem;
+  }
+
+  .metaRow {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

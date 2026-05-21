@@ -1,0 +1,153 @@
+.section {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Tabs Navigation */
+.tabsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--border-radius-full);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.02);
+  border: var(--border-subtle);
+  color: var(--text-secondary);
+  transition: var(--transition-normal);
+}
+
+.tabBtn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.activeTab {
+  color: #ffffff;
+  background: var(--gradient-accent);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-glow);
+}
+
+/* Grid display */
+.fleetGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* Custom layout for single items or France/Italy */
+.singleGrid {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.shipCard {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  border: var(--border-subtle);
+  aspect-ratio: 16 / 9;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+}
+
+.shipCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: var(--shadow-glow), var(--shadow-lg);
+}
+
+.shipImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.shipCard:hover .shipImage {
+  transform: scale(1.05);
+}
+
+.shipOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(11, 11, 12, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+}
+
+.shipName {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.shipDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 500px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: var(--transition-normal);
+}
+
+.shipCard:hover .shipDesc {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .shipOverlay {
+    padding: 20px;
+  }
+  
+  .shipName {
+    font-size: 1.4rem;
+  }
+  
+  .shipDesc {
+    opacity: 1;
+    transform: translateY(0);
+    font-size: 0.8rem;
+  }
+}
